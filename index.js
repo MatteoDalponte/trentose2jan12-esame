@@ -32,4 +32,3 @@ app.listen(port, function(){
     console.log('server in funzione');
 });
 
-module.exports = astro;

@@ -21,4 +21,18 @@ astro.get('/',function(req,resp){       //info utente x dove x è ID
     resp.json(astronauti);
 });
 
+astro.get('/:x',function(req,resp){       //info utente x dove x è ID
+
+    var user = {};
+
+    for(var i=0; i<astronauti.length; i++){
+        if(astronauti[i].ID == req.params.x){
+            user = astronauti[i];
+        }
+    }
+
+    resp.json(user);
+});
+
+
 module.exports = astro;
